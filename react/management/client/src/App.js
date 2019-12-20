@@ -7,35 +7,25 @@ import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 
-
-const customers = [
-{
-'id': 1,
-'image': 'https://placeimg.com/64/64/1',
-'name': '김병갑',
-'birthday': '19800101',
-'gender': '남자',
-'job': '대학생'
-},
-{
-'id': 2,
-'image': 'https://placeimg.com/64/64/2',
-'name': '황정필',
-'birthday': '19800101',
-'gender': '남자',
-'job': '프로그래머'
-},
-{
-'id': 3,
-'image': 'https://placeimg.com/64/64/3',
-'name': '송양종',
-'birthday': '19800101',
-'gender': '남자',
-'job': '디자이너'
-}
-]
-
 class App extends Component {
+  
+  state = {
+    customers: ''
+  }
+
+  componentDidMount() {
+    this.callApi()
+    .then(res => this.setState({customers: res}))
+    .catch(err => console.log(err));
+  }
+
+  callApi = async () => {
+    const response = await fetch('/api/customers');
+    const body = await response.json();
+    return body;
+  }
+
+
   render() {
     return (
       <div>
@@ -51,9 +41,9 @@ class App extends Component {
             </TableRow>
           </TableHead>
           <TableBody>
-            {customers.map(c => {
+            {this.state.customers ? this.state.customers.map(c => {
             return <Customer key={c.id} id={c.id} image={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job} />
-            })}
+            }) : ''}
           </TableBody>
         </Table>
       </div>
