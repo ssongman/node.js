@@ -36,6 +36,7 @@
                   label="년월선택"
                   prepend-icon="mdi-timetable"
                   readonly
+                  single-line
                   v-bind="attrs"
                   v-on="on"
                 ></v-text-field>
