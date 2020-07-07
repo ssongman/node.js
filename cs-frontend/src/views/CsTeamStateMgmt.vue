@@ -19,7 +19,7 @@
           <v-divider class="mx-4" inset vertical />
           <v-spacer />
 
-          <div width="100px">
+          <div width="1000px">
             <v-menu
               ref="menu"
               v-model="menu"

@@ -1,0 +1,152 @@
+[
+    {
+        "group_id": 50,
+        "조직": "고객5G&AI팀",
+        "Agile 업무 적용": 0,
+        "AI 역량 향상": 0,
+        "DevOps 업무적용": 0,
+        "Full Stack 개발자 양성": 0,
+        "MSA/No-SQL역량 향상": 1,
+        "Multi-LOB 역량자 양성": 0
+    },
+    {
+        "group_id": 51,
+        "조직": "Rater운영팀",
+        "Agile 업무 적용": 5,
+        "AI 역량 향상": 3,
+        "DevOps 업무적용": 2,
+        "Full Stack 개발자 양성": 2,
+        "MSA/No-SQL역량 향상": 2,
+        "Multi-LOB 역량자 양성": 0
+    },
+    {
+        "group_id": 52,
+        "조직": "Rater개발팀",
+        "Agile 업무 적용": 3,
+        "AI 역량 향상": 3,
+        "DevOps 업무적용": 6,
+        "Full Stack 개발자 양성": 1,
+        "MSA/No-SQL역량 향상": 5,
+        "Multi-LOB 역량자 양성": 0
+    },
+    {
+        "group_id": 53,
+        "조직": "빌링운영팀",
+        "Agile 업무 적용": 0,
+        "AI 역량 향상": 4,
+        "DevOps 업무적용": 2,
+        "Full Stack 개발자 양성": 2,
+        "MSA/No-SQL역량 향상": 2,
+        "Multi-LOB 역량자 양성": 0
+    },
+    {
+        "group_id": 54,
+        "조직": "빌링개발팀",
+        "Agile 업무 적용": 2,
+        "AI 역량 향상": 5,
+        "DevOps 업무적용": 2,
+        "Full Stack 개발자 양성": 1,
+        "MSA/No-SQL역량 향상": 6,
+        "Multi-LOB 역량자 양성": 3
+    },
+    {
+        "group_id": 55,
+        "조직": "PAY서비스팀",
+        "Agile 업무 적용": 2,
+        "AI 역량 향상": 4,
+        "DevOps 업무적용": 4,
+        "Full Stack 개발자 양성": 7,
+        "MSA/No-SQL역량 향상": 2,
+        "Multi-LOB 역량자 양성": 0
+    },
+    {
+        "group_id": 56,
+        "조직": "유통서비스팀",
+        "Agile 업무 적용": 4,
+        "AI 역량 향상": 11,
+        "DevOps 업무적용": 4,
+        "Full Stack 개발자 양성": 3,
+        "MSA/No-SQL역량 향상": 4,
+        "Multi-LOB 역량자 양성": 0
+    },
+    {
+        "group_id": 57,
+        "조직": "고객운영팀",
+        "Agile 업무 적용": 2,
+        "AI 역량 향상": 2,
+        "DevOps 업무적용": 2,
+        "Full Stack 개발자 양성": 0,
+        "MSA/No-SQL역량 향상": 0,
+        "Multi-LOB 역량자 양성": 2
+    },
+    {
+        "group_id": 58,
+        "조직": "고객개발팀",
+        "Agile 업무 적용": 4,
+        "AI 역량 향상": 1,
+        "DevOps 업무적용": 2,
+        "Full Stack 개발자 양성": 3,
+        "MSA/No-SQL역량 향상": 0,
+        "Multi-LOB 역량자 양성": 3
+    },
+    {
+        "group_id": 59,
+        "조직": "오더통합운영팀",
+        "Agile 업무 적용": 3,
+        "AI 역량 향상": 4,
+        "DevOps 업무적용": 0,
+        "Full Stack 개발자 양성": 2,
+        "MSA/No-SQL역량 향상": 3,
+        "Multi-LOB 역량자 양성": 0
+    },
+    {
+        "group_id": 60,
+        "조직": "오더통합개발팀",
+        "Agile 업무 적용": 2,
+        "AI 역량 향상": 4,
+        "DevOps 업무적용": 0,
+        "Full Stack 개발자 양성": 5,
+        "MSA/No-SQL역량 향상": 2,
+        "Multi-LOB 역량자 양성": 0
+    },
+    {
+        "group_id": 61,
+        "조직": "BSS품질혁신TF",
+        "Agile 업무 적용": 3,
+        "AI 역량 향상": 9,
+        "DevOps 업무적용": 0,
+        "Full Stack 개발자 양성": 0,
+        "MSA/No-SQL역량 향상": 6,
+        "Multi-LOB 역량자 양성": 0
+    },
+    {
+        "group_id": 62,
+        "조직": "CRM사업팀",
+        "Agile 업무 적용": 0,
+        "AI 역량 향상": 9,
+        "DevOps 업무적용": 0,
+        "Full Stack 개발자 양성": 1,
+        "MSA/No-SQL역량 향상": 0,
+        "Multi-LOB 역량자 양성": 0
+    },
+    {
+        "group_id": 63,
+        "조직": "CRM서비스팀",
+        "Agile 업무 적용": 0,
+        "AI 역량 향상": 12,
+        "DevOps 업무적용": 5,
+        "Full Stack 개발자 양성": 5,
+        "MSA/No-SQL역량 향상": 9,
+        "Multi-LOB 역량자 양성": 0
+    },
+    {
+        "group_id": 64,
+        "조직": "오픈채널서비스팀",
+        "Agile 업무 적용": 11,
+        "AI 역량 향상": 22,
+        "DevOps 업무적용": 0,
+        "Full Stack 개발자 양성": 0,
+        "MSA/No-SQL역량 향상": 1,
+        "Multi-LOB 역량자 양성": 0
+    }
+]

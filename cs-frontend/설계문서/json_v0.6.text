@@ -1,0 +1,480 @@
+
+
+
+
+
+1. 양식 정의 ( 팀별회고목록(teamlookback) )
+
+
+1) 필드명
+
+------------ ------------- ------------------------
+구분         field         fieldname
+------------ ------------- ------------------------
+조직         group_id      group_id
+             org           담당
+             team          팀
+개인일감수   c_agile       Agile 업무 적용
+             c_aiup        AI 역량 향상
+             c_devops      DevOps 업무적용
+             c_fullstack   Full Stack 개발자 양성
+             c_msanosql    MSA/No-SQL역량 향상
+             c_multilob    Multi-LOB 역량자 양성
+신호등       t_agile       t_agile
+             t_aiup        t_aiup
+             t_devops      t_devops
+             t_fullstack   t_fullstack
+             t_msanosql    t_msanosql
+             t_multilob    t_multilob
+회고내용     l_agile       l_agile
+             l_aiup        l_aiup
+             l_devops      l_devops
+             l_fullstack   l_fullstack
+             l_msanosql    l_msanosql
+             l_multilob    l_multilob
+------------ ------------- ------------------------
+
+
+2) 코드에서 사용되는 명칭
+
+
+
+      { text: "group id", value: "group_id" },
+      { text: "담당", value: "org" },
+      { text: "팀", value: "team" },
+      { text: "Agile 업무 적용", value: "agile" },
+      { text: "AI 역량 향상", value: "aiup" },
+      { text: "DevOps 업무적용", value: "devops" },
+      { text: "t_agile", align: "center", value: "t_agile"},
+      { text: "t_aiup", align: "center", value: "t_aiup"},
+      { text: "t_devops", align: "center", value: "t_devops"},
+      { text: "t_fullstack", align: "center", value: "t_fullstack"},
+      { text: "t_msanosql", align: "center", value: "t_msanosql"},
+      { text: "t_multilob", align: "center", value: "t_multilob"},
+      { text: "l_agile", align: "center", value: "l_agile"},
+      { text: "l_aiup", align: "center", value: "l_aiup"},
+      { text: "l_devops  ", align: "center", value: "l_devops"},
+      { text: "l_fullstack", align: "center", value: "l_fullstack"},
+      { text: "l_msanosql", align: "center", value: "l_msanosql"},
+      { text: "l_multilob ", align: "center", value: "l_multilob "}
+      
+      
+
+
+      getTeamLBInfoListSample() {
+        this.teamlookback = [
+          {
+            group_id: 50,
+            org: "빌림담당",
+            team: "고객5G&AI팀",
+            agile: 0,
+            aiup: 0,
+            devops: 0,
+            t_agile: "R"
+          },
+          {
+            group_id: 51,
+            org: "빌림담당",
+            team: "Rater운영팀",
+            agile: 5,
+            aiup: 3,
+            devops: 2,
+            t_agile: "R"
+          }
+        ];
+      
+        
+
+2. json sample
+
+
+1) json sample
+[
+    {
+        "group_id": 50,
+        "org": "빌림담당",
+        "team": "고객5G&AI팀",
+
+        /* 개인일감수 */
+        "agile": 0,
+        "aiup": 0,
+        "devops": 0,
+        "fullstack": 0,
+        "msanosql": 1,
+        "multilob": 0,
+
+        /* 신호등 */
+        "t_agile": "R",
+        "t_aiup": "Y",
+        "t_devops": "G",
+        "t_fullstack": "G",
+        "t_msanosql": "G",
+        "t_multilob": "G",
+
+        /* 회고 */
+        "l_agile": "CF분과 간단 회고",
+        "l_aiup": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_devops": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_fullstack": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_msanosql": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_multilob": "회고내용입니다. 내용이 꽤나길텐데"
+
+    },
+    {}
+]
+
+
+
+====================================================================
+
+
+3. sample full
+
+            
+      this.teamlookback = [
+    {
+        "group_id": 50,
+        "org": "CRM담당",
+        "team": "고객5G&AI팀",
+        "agile": 0,
+        "aiup": 0,
+        "devops": 0,
+        "fullstack": 0,
+        "msanosql": 1,
+        "multilob": 0,
+        "t_agile": "R",
+        "t_aiup": "Y",
+        "t_devops": "G",
+        "t_fullstack": "G",
+        "t_msanosql": "G",
+        "t_multilob": "R",
+        "l_agile": "CF분과 간단 회고",
+        "l_aiup": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_devops": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_fullstack": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_msanosql": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_multilob": "회고내용입니다. 내용이 꽤나길텐데"
+    },
+    {
+        "group_id": 51,
+        "org": "빌림담당",
+        "team": "Rater운영팀",
+        "agile": 5,
+        "aiup": 3,
+        "devops": 2,
+        "fullstack": 2,
+        "msanosql": 2,
+        "multilob": 0,
+        "t_agile": "R",
+        "t_aiup": "Y",
+        "t_devops": "G",
+        "t_fullstack": "G",
+        "t_msanosql": "G",
+        "t_multilob": "R",
+        "l_agile": "CF분과 간단 회고",
+        "l_aiup": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_devops": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_fullstack": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_msanosql": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_multilob": "회고내용입니다. 내용이 꽤나길텐데"
+    },
+    {
+        "group_id": 52,
+        "org": "빌림담당",
+        "team": "Rater개발팀",
+        "agile": 3,
+        "aiup": 3,
+        "devops": 6,
+        "fullstack": 1,
+        "msanosql": 5,
+        "multilob": 0,
+        "t_agile": "R",
+        "t_aiup": "Y",
+        "t_devops": "G",
+        "t_fullstack": "G",
+        "t_msanosql": "G",
+        "t_multilob": "R",
+        "l_agile": "CF분과 간단 회고",
+        "l_aiup": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_devops": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_fullstack": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_msanosql": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_multilob": "회고내용입니다. 내용이 꽤나길텐데"
+    },
+    {
+        "group_id": 53,
+        "org": "빌림담당",
+        "team": "빌링운영팀",
+        "agile": 0,
+        "aiup": 4,
+        "devops": 2,
+        "fullstack": 2,
+        "msanosql": 2,
+        "multilob": 0,
+        "t_agile": "R",
+        "t_aiup": "Y",
+        "t_devops": "G",
+        "t_fullstack": "G",
+        "t_msanosql": "G",
+        "t_multilob": "R",
+        "l_agile": "CF분과 간단 회고",
+        "l_aiup": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_devops": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_fullstack": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_msanosql": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_multilob": "회고내용입니다. 내용이 꽤나길텐데"
+    },
+    {
+        "group_id": 54,
+        "org": "빌림담당",
+        "team": "빌링개발팀",
+        "agile": 2,
+        "aiup": 5,
+        "devops": 2,
+        "fullstack": 1,
+        "msanosql": 6,
+        "multilob": 3,
+        "t_agile": "R",
+        "t_aiup": "Y",
+        "t_devops": "G",
+        "t_fullstack": "G",
+        "t_msanosql": "G",
+        "t_multilob": "R",
+        "l_agile": "CF분과 간단 회고",
+        "l_aiup": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_devops": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_fullstack": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_msanosql": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_multilob": "회고내용입니다. 내용이 꽤나길텐데"
+    },
+    {
+        "group_id": 55,
+        "org": "빌림담당",
+        "team": "PAY서비스팀",
+        "agile": 2,
+        "aiup": 4,
+        "devops": 4,
+        "fullstack": 7,
+        "msanosql": 2,
+        "multilob": 0,
+        "t_agile": "R",
+        "t_aiup": "Y",
+        "t_devops": "G",
+        "t_fullstack": "G",
+        "t_msanosql": "G",
+        "t_multilob": "R",
+        "l_agile": "CF분과 간단 회고",
+        "l_aiup": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_devops": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_fullstack": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_msanosql": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_multilob": "회고내용입니다. 내용이 꽤나길텐데"
+    },
+    {
+        "group_id": 56,
+        "org": "고객담당",
+        "team": "유통서비스팀",
+        "agile": 4,
+        "aiup": 11,
+        "devops": 4,
+        "fullstack": 3,
+        "msanosql": 4,
+        "multilob": 0,
+        "t_agile": "R",
+        "t_aiup": "Y",
+        "t_devops": "G",
+        "t_fullstack": "G",
+        "t_msanosql": "G",
+        "t_multilob": "R",
+        "l_agile": "CF분과 간단 회고",
+        "l_aiup": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_devops": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_fullstack": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_msanosql": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_multilob": "회고내용입니다. 내용이 꽤나길텐데"
+    },
+    {
+        "group_id": 57,
+        "org": "고객담당",
+        "team": "고객운영팀",
+        "agile": 2,
+        "aiup": 2,
+        "devops": 2,
+        "fullstack": 0,
+        "msanosql": 0,
+        "multilob": 2,
+        "t_agile": "R",
+        "t_aiup": "Y",
+        "t_devops": "G",
+        "t_fullstack": "G",
+        "t_msanosql": "G",
+        "t_multilob": "R",
+        "l_agile": "CF분과 간단 회고",
+        "l_aiup": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_devops": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_fullstack": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_msanosql": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_multilob": "회고내용입니다. 내용이 꽤나길텐데"
+    },
+    {
+        "group_id": 58,
+        "org": "고객담당",
+        "team": "고객개발팀",
+        "agile": 4,
+        "aiup": 1,
+        "devops": 2,
+        "fullstack": 3,
+        "msanosql": 0,
+        "multilob": 3,
+        "t_agile": "R",
+        "t_aiup": "Y",
+        "t_devops": "G",
+        "t_fullstack": "G",
+        "t_msanosql": "G",
+        "t_multilob": "R",
+        "l_agile": "CF분과 간단 회고",
+        "l_aiup": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_devops": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_fullstack": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_msanosql": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_multilob": "회고내용입니다. 내용이 꽤나길텐데"
+    },
+    {
+        "group_id": 59,
+        "org": "CRM담당",
+        "team": "오더통합운영팀",
+        "agile": 3,
+        "aiup": 4,
+        "devops": 0,
+        "fullstack": 2,
+        "msanosql": 3,
+        "multilob": 0,
+        "t_agile": "R",
+        "t_aiup": "Y",
+        "t_devops": "G",
+        "t_fullstack": "G",
+        "t_msanosql": "G",
+        "t_multilob": "R",
+        "l_agile": "CF분과 간단 회고",
+        "l_aiup": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_devops": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_fullstack": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_msanosql": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_multilob": "회고내용입니다. 내용이 꽤나길텐데"
+    },
+    {
+        "group_id": 60,
+        "org": "고객담당",
+        "team": "오더통합개발팀",
+        "agile": 2,
+        "aiup": 4,
+        "devops": 0,
+        "fullstack": 5,
+        "msanosql": 2,
+        "multilob": 0,
+        "t_agile": "R",
+        "t_aiup": "Y",
+        "t_devops": "G",
+        "t_fullstack": "G",
+        "t_msanosql": "G",
+        "t_multilob": "R",
+        "l_agile": "CF분과 간단 회고",
+        "l_aiup": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_devops": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_fullstack": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_msanosql": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_multilob": "회고내용입니다. 내용이 꽤나길텐데"
+    },
+    {
+        "group_id": 61,
+        "org": "CRM담당",
+        "team": "BSS품질혁신TF",
+        "agile": 3,
+        "aiup": 9,
+        "devops": 0,
+        "fullstack": 0,
+        "msanosql": 6,
+        "multilob": 0,
+        "t_agile": "R",
+        "t_aiup": "Y",
+        "t_devops": "G",
+        "t_fullstack": "G",
+        "t_msanosql": "G",
+        "t_multilob": "R",
+        "l_agile": "CF분과 간단 회고",
+        "l_aiup": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_devops": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_fullstack": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_msanosql": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_multilob": "회고내용입니다. 내용이 꽤나길텐데"
+    },
+    {
+        "group_id": 62,
+        "org": "CRM담당",
+        "team": "CRM사업팀",
+        "agile": 0,
+        "aiup": 9,
+        "devops": 0,
+        "fullstack": 1,
+        "msanosql": 0,
+        "multilob": 0,
+        "t_agile": "R",
+        "t_aiup": "Y",
+        "t_devops": "G",
+        "t_fullstack": "G",
+        "t_msanosql": "G",
+        "t_multilob": "R",
+        "l_agile": "CF분과 간단 회고",
+        "l_aiup": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_devops": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_fullstack": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_msanosql": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_multilob": "회고내용입니다. 내용이 꽤나길텐데"
+    },
+    {
+        "group_id": 63,
+        "org": "CRM담당",
+        "team": "CRM서비스팀",
+        "agile": 0,
+        "aiup": 12,
+        "devops": 5,
+        "fullstack": 5,
+        "msanosql": 9,
+        "multilob": 0,
+        "t_agile": "R",
+        "t_aiup": "Y",
+        "t_devops": "G",
+        "t_fullstack": "G",
+        "t_msanosql": "G",
+        "t_multilob": "R",
+        "l_agile": "CF분과 간단 회고",
+        "l_aiup": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_devops": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_fullstack": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_msanosql": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_multilob": "회고내용입니다. 내용이 꽤나길텐데"
+    },
+    {
+        "group_id": 64,
+        "org": "CRM담당",
+        "team": "오픈채널서비스팀",
+        "agile": 11,
+        "aiup": 22,
+        "devops": 0,
+        "fullstack": 0,
+        "msanosql": 1,
+        "multilob": 0,
+        "t_agile": "R",
+        "t_aiup": "Y",
+        "t_devops": "G",
+        "t_fullstack": "G",
+        "t_msanosql": "G",
+        "t_multilob": "R",
+        "l_agile": "CF분과 간단 회고",
+        "l_aiup": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_devops": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_fullstack": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_msanosql": "회고내용입니다. 내용이 꽤나길텐데",
+        "l_multilob": "회고내용입니다. 내용이 꽤나길텐데"
+    }
+]
