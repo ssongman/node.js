@@ -1,7 +1,7 @@
 <template>
   <v-app id="main-app">
     <!-- App bar 앱바 -->
-    <!-- <v-app-bar
+    <v-app-bar
       v-scroll="onScroll"
       :color="isTransparent ? 'transparent' : 'grey darken-3'"
       app
@@ -33,7 +33,7 @@
         </router-link>
       </v-toolbar-title>
 
-      <v-spacer /> -->
+      <v-spacer />
 
     <!-- Top Menus 상단 메뉴 -->
     <!-- <v-toolbar-items>
@@ -69,7 +69,7 @@
     <!-- Top Menus 상단 메뉴 -->
 
     <!-- User name display and SignIn 버튼 사용자 이름 표시 -->
-    <!-- <v-toolbar-items v-if="authorized">
+    <v-toolbar-items v-if="authorized">
         <v-menu
           v-model="loginUserToggle"
           transition="scale-transition"
@@ -141,15 +141,15 @@
             </v-list>
           </v-card>
         </v-menu>
-      </v-toolbar-items> -->
-    <!-- User name display and More button 사용자 이름 표시 -->
+      </v-toolbar-items>
+      <!-- User name display and More button 사용자 이름 표시 -->
 
-    <!-- <v-toolbar-items v-else>
+      <v-toolbar-items v-else>
         <v-btn text :to="{ name: 'SignIn' }">
           <span class="title">로그인/가입하기</span>
         </v-btn>
       </v-toolbar-items>
-    </v-app-bar> -->
+    </v-app-bar>
     <!-- App bar 앱바 -->
 
     <!-- Navigation Drawer 네비게이션 드라워 -->
@@ -206,15 +206,15 @@
     <!-- Contents 컨텐츠 -->
 
     <!-- Footer 풋터 -->
-    <!-- <v-footer color="grey darken-2" dark>
+    <v-footer color="grey darken-2" dark>
       <v-row align="center" justify="center" align-content="center">
         <v-col class="text-center">
           <h1 class="title font-weight-light">
-            &copy; {{ new Date().getFullYear() }} Arsenal Vue Sample Basic
+            &copy; {{ new Date().getFullYear() }} Customer Service Head Office
           </h1>
         </v-col>
       </v-row>
-    </v-footer> -->
+    </v-footer>
     <!-- Footer 풋터 -->
   </v-app>
 </template>

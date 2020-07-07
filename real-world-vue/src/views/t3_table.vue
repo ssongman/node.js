@@ -1,10 +1,11 @@
 <template>
   <v-container fluid>
+    <PageDescriber :describer="describer" />
     <v-toolbar flat color="white">
       <v-toolbar-title>팀별 회고 목록</v-toolbar-title>
       <v-divider class="mx-4" inset vertical />
       <v-spacer />
-
+      
       <div width="1000px">
         <v-menu
           ref="menu"
@@ -35,7 +36,6 @@
           </v-date-picker>
         </v-menu>
       </div>
-      <v-spacer />
 
       <div>
         <v-btn
@@ -181,6 +181,7 @@ export default {
   },
 
   data: () => ({
+    describer: { title: "역량강화TF" },
     teamlookback: []
   }),
 
