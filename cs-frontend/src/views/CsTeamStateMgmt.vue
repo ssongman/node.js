@@ -7,11 +7,11 @@
       서버를 지정하지 않았을 경우 오류가 발생 합니다.
     </v-alert> -->
 
-    <v-toolbar flat color="white">
+    <v-toolbar flat color="white" class="pt-4">
       <v-toolbar-title>팀별 회고 목록</v-toolbar-title>
       <v-divider class="mx-4" inset vertical />
       <v-spacer />
-      
+
       <div width="1000px">
         <v-menu
           ref="menu"
@@ -33,12 +33,17 @@
               v-on="on"
             ></v-text-field>
           </template>
-          <v-date-picker v-model="date" type="month" no-title scrollable>
-            <v-spacer></v-spacer>
+          <v-date-picker
+            v-model="date"
+            type="month"
+            no-title
+            @input="$refs.menu.save(date)"
+          >
+            <!-- <v-spacer></v-spacer>
             <v-btn text color="primary" @click="menu = false">Cancel</v-btn>
             <v-btn text color="primary" @click="$refs.menu.save(date)"
               >OK</v-btn
-            >
+            > -->
           </v-date-picker>
         </v-menu>
       </div>
@@ -59,13 +64,13 @@
       <template>
         <thead>
           <tr>
-            <th class="text-center" width="200px">Team</th>
-            <th class="text-center">Agile업무적용</th>
-            <th class="text-center">AI역량향상</th>
-            <th class="text-center">DevOps업무적용</th>
-            <th class="text-center">FullStack개발자양성</th>
-            <th class="text-center">MSA/No-SQL역량향상</th>
-            <th class="text-center">Multi-LOB역량자양성</th>
+            <th class="title text-center" width="200px">Team</th>
+            <th class="title text-center">Agile업무</th>
+            <th class="title text-center">AI역량향상</th>
+            <th class="title text-center">DevOps업무</th>
+            <th class="title text-center">FullStack</th>
+            <th class="title text-center">MSA/No-SQL</th>
+            <th class="title text-center">Multi-LOB</th>
           </tr>
         </thead>
         <tbody>
@@ -175,10 +180,6 @@
         <TeamCard p_goalcnt=2 p_tflag='G' p_lookback_short="회고6" p_lookback='이것은 회고내용 입니다.6' />
       </v-col>
     </v-row> -->
-
-
-
-
   </v-container>
 </template>
 
@@ -191,6 +192,8 @@ export default {
     TeamCard
   },
   data: () => ({
+    date: new Date().toISOString().substr(0, 7),
+    menu: false,
     describer: { title: "역량강화TF" },
     teamlookback: []
     // dialog: false
@@ -318,7 +321,7 @@ export default {
       else if (t_flag == "Y") return "yellow";
       else return "green";
     },
-    
+
     getTeamLBInfoListSample() {
       this.teamlookback = [
         {

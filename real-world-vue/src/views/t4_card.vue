@@ -11,20 +11,14 @@
       </template>
     </v-card-title>
 
-    <v-card-actions>
-      <v-btn text @click="show = !show">{{ p_lookback_short }}</v-btn>
-      <v-spacer></v-spacer>
-      <v-btn icon @click="show = !show">
-        <v-icon>{{ show ? "mdi-chevron-up" : "mdi-chevron-down" }}</v-icon>
-      </v-btn>
-    </v-card-actions>
-
-    <v-expand-transition>
-      <div v-show="show">
-        <v-divider></v-divider>
-        <v-card-text> {{ p_lookback }} </v-card-text>
-      </div>
-    </v-expand-transition>
+    <v-tooltip bottom>
+      <template v-slot:activator="{ on, attrs }">
+        <v-card-subtitle v-bind="attrs" v-on="on">{{
+          p_lookback_short
+        }}</v-card-subtitle>
+      </template>
+      <span>{{ p_lookback }}</span>
+    </v-tooltip>
   </v-card>
 </template>
 
